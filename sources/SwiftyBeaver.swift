@@ -77,35 +77,35 @@ public class SwiftyBeaver {
     
     // MARK: Levels
     
-    public class func verbose(msg: Any, _ path: String = #file, _ function: String = #function, line: Int = #line) {
+    public class func verbose(msg: Any, _ path: String = __FILE__, _ function: String = __FUNCTION__, line: Int = __LINE__) {
         dispatch_send(Level.Verbose, msg: msg, thread: threadName(), path: path, function: function, line: line)
     }
 
-    public class func debug(msg: Any, _ path: String = #file, _ function: String = #function, line: Int = #line) {
+    public class func debug(msg: Any, _ path: String = __FILE__, _ function: String = __FUNCTION__, line: Int = __LINE__) {
         dispatch_send(Level.Debug, msg: msg, thread: threadName(), path: path, function: function, line: line)
     }
     
-    public class func info(msg: Any, _ path: String = #file, _ function: String = #function, line: Int = #line) {
+    public class func info(msg: Any, _ path: String = __FILE__, _ function: String = __FUNCTION__, line: Int = __LINE__) {
         dispatch_send(Level.Info, msg: msg, thread: threadName(), path: path, function: function, line: line)
     }
     
-    public class func user(msg: Any, _ path: String = #file, _ function: String = #function, line: Int = #line) {
+    public class func user(msg: Any, _ path: String = __FILE__, _ function: String = __FUNCTION__, line: Int = __LINE__) {
         dispatch_send(Level.User, msg: msg, thread: threadName(), path: path, function: function, line: line)
     }
 
-    public class func warning(msg: Any, _ path: String = #file, _ function: String = #function, line: Int = #line) {
+    public class func warning(msg: Any, _ path: String = __FILE__, _ function: String = __FUNCTION__, line: Int = __LINE__) {
         dispatch_send(Level.Warning, msg: msg, thread: threadName(), path: path, function: function, line: line)
     }
     
-    public class func error(msg: Any, _ path: String = #file, _ function: String = #function, line: Int = #line) {
+    public class func error(msg: Any, _ path: String = __FILE__, _ function: String = __FUNCTION__, line: Int = __LINE__) {
         dispatch_send(Level.Error, msg: msg, thread: threadName(), path: path, function: function, line: line)
     }
     
-    public class func trace(path: String = #file, _ function: String = #function, line: Int = #line) {
+    public class func trace(path: String = __FILE__, _ function: String = __FUNCTION__, line: Int = __LINE__) {
         dispatch_send(Level.Info, msg: " ", thread: threadName(), path: path, function: function, line: line)
     }
 
-    public class func traceUser(path: String = #file, _ function: String = #function, line: Int = #line) {
+    public class func traceUser(path: String = __FILE__, _ function: String = __FUNCTION__, line: Int = __LINE__) {
         dispatch_send(Level.User, msg: " ", thread: threadName(), path: path, function: function, line: line)
     }
 
